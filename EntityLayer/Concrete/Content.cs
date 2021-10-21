@@ -11,5 +11,8 @@ namespace EntityLayer.Concrete
         public int ContentID { get; set; }
         public string ContentValue { get; set; }
         public DateTime ContentDate { get; set; }
+
+        public ICollection<Content> Contents { get; set; }
+        public virtual Heading Heading { get; set; }
     }
 }
