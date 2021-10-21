@@ -17,14 +17,15 @@ namespace BusinesssLayer.Concrete
         }
         public void CategoryAddBL(Category p)
         {
-            if (p.CategoryName=="" || p.CategoryName.Length<=3)
-            {
-                //hata mesajı
-            }
-            else
-            {
-                repo.Insert(p);
-            }
+            repo.Insert(p);
+            //if (p.CategoryName=="" || p.CategoryName.Length<=3)
+            //{
+            //    //hata mesajı
+            //}
+            //else
+            //{
+
+            //}
         }
     }
 }
