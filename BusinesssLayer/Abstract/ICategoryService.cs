@@ -5,11 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLayer.Abstract
+namespace BusinesssLayer.Abstract
 {
-   public interface ICategoryDal:IRepository<Category>
+    public interface ICategoryService
     {
-        
-
+        List<Category> GetList();
     }
 }
