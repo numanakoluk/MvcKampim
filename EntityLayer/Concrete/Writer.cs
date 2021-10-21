@@ -14,5 +14,8 @@ namespace EntityLayer.Concrete
         public int WriterImage { get; set; }
         public int WriterMail { get; set; }
         public int WriterPassword { get; set; }
+
+        public ICollection<Heading> Headings { get; set; }
+        public ICollection<Content> Contents { get; set; }
     }
 }
