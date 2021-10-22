@@ -14,6 +14,7 @@ namespace Mvc_Kampim.Controllers
         // GET: Heading
 
         HeadingManager hm = new HeadingManager(new EfHeadingDal());
+        CategoryManager cm = new CategoryManager(new EfCategoryDal());
         public ActionResult Index()
         {
             var headingvalues = hm.GetList();
@@ -22,6 +23,14 @@ namespace Mvc_Kampim.Controllers
         [HttpGet]
         public ActionResult AddHeading()
         {
+            List<SelectListItem> valuecategory = (from x in cm.GetList()
+                                                  select new SelectListItem
+                                                  {
+                                                      Text = x.CategoryName,
+                                                      Value = x.CategoryID.ToString()
+                                                  }
+                                                  ).ToList();
+            ViewBag.vlc = valuecategory;
             return View();
         }
         [HttpPost]
