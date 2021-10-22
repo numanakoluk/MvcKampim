@@ -1,5 +1,6 @@
 ﻿using BusinesssLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,18 @@ namespace Mvc_Kampim.Controllers
         {
             var headingvalues = hm.GetList();
             return View(headingvalues);
+        }
+        [HttpGet]
+        public ActionResult AddHeading()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddHeading(Heading p)
+        {
+            p.HeadingDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+            hm.HeadingAdd(p);
+            return RedirectToAction("Index");
         }
     }
 }
