@@ -65,5 +65,11 @@ namespace Mvc_Kampim.Controllers
             var HeadingValue = hm.GetByID(id);
             return View(HeadingValue);  
         }
+        [HttpPost]
+        public ActionResult EditHeading(Heading p)
+        {
+            hm.HeadingUpdate(p);
+            return RedirectToAction("Index");
+        }
     }
 }
