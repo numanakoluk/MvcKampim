@@ -18,8 +18,8 @@ namespace Mvc_Kampim.Controllers
         }
         public ActionResult ContentByHeading(int id)
         {
-            var contentvalues =
-            return View();
+            var contentvalues = cm.GetListByHeadingID(id);
+            return View(contentvalues);
         }
     }
 }
