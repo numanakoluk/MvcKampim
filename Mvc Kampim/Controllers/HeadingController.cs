@@ -71,5 +71,11 @@ namespace Mvc_Kampim.Controllers
             hm.HeadingUpdate(p);
             return RedirectToAction("Index");
         }
+        public ActionResult DeleteHeading(int id)
+        {
+            var headingValue = hm.GetByID(id);
+            hm.HeadingDelete(headingValue);
+            return RedirectToAction("Index");
+        }
     }
 }
