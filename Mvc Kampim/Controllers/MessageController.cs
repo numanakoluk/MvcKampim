@@ -1,5 +1,6 @@
 ﻿using BusinesssLayer.Concrete;
 using DataAccessLayer.EntityFramework;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,18 @@ namespace Mvc_Kampim.Controllers
         {
             var messagelist = cm.GetListSendbox();
             return View(messagelist);
+        }
+
+        [HttpGet]
+        public ActionResult NewMessage()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult NewMessage(Message p)
+        {
+
+            return View();
         }
     }
 }
