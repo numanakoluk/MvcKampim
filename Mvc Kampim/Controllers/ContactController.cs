@@ -19,5 +19,10 @@ namespace Mvc_Kampim.Controllers
             var contactvalues = cm.GetList();
             return View(contactvalues);
         }
+        public ActionResult GetContactDetails(int id)
+        {
+            var contactvalues = cm.GetByID(id);
+            return View(contactvalues);
+        }
     }
 }
