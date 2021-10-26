@@ -18,14 +18,25 @@ namespace BusinesssLayer.Concrete
             _ımessageDal = ımessageDal;
         }
 
+        public object GetListBox()
+        {
+            throw new NotImplementedException();
+        }
+
         public Message GetByID(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Message> GetList()
+        public List<Message> GetListInbox()
         {
             return _ımessageDal.List(x => x.ReceiverMail == "admin@gmail.com");
+        }
+
+
+        public List<Message> GetListSendbox()
+        {
+            return _ımessageDal.List(x => x.SenderMail == "admin@gmail.com");
         }
 
         public void MessageAdd(Message message)

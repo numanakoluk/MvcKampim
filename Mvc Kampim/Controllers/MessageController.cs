@@ -15,7 +15,12 @@ namespace Mvc_Kampim.Controllers
         public ActionResult Inbox()
             
         {
-            var messagelist = cm.GetList();
+            var messagelist = cm.GetListInbox();
+            return View(messagelist);
+        }
+        public ActionResult Sendbox()
+        {
+            var messagelist = cm.GetListSendbox();
             return View(messagelist);
         }
     }
