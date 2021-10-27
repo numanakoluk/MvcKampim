@@ -138,6 +138,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContentController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
     <Compile Include="Controllers\HeadingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
@@ -1995,6 +1996,16 @@
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.css" />
     <Content Include="AdminLTE-3.0.4\plugins\toastr\toastr.min.js" />
     <Content Include="AdminLTE-3.0.4\starter.html" />
+    <Content Include="AdminLTE-3.0.4\ımages\13.jpg" />
+    <Content Include="AdminLTE-3.0.4\ımages\bb.jpg" />
+    <Content Include="AdminLTE-3.0.4\ımages\bcs.jpg" />
+    <Content Include="AdminLTE-3.0.4\ımages\cz.jpg" />
+    <Content Include="AdminLTE-3.0.4\ımages\dark.jfif" />
+    <Content Include="AdminLTE-3.0.4\ımages\dis.jpg" />
+    <Content Include="AdminLTE-3.0.4\ımages\hmym.jpg" />
+    <Content Include="AdminLTE-3.0.4\ımages\htsdof.jpg" />
+    <Content Include="AdminLTE-3.0.4\ımages\prisonbreak.jfif" />
+    <Content Include="AdminLTE-3.0.4\ımages\this is us.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -2315,6 +2326,7 @@
     <Content Include="Views\Message\GetInBoxMessageDetails.cshtml" />
     <Content Include="Views\Message\GetSendBoxMessageDetails.cshtml" />
     <Content Include="Views\ErrorPage\Page404.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
