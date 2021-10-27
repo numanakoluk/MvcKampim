@@ -18,6 +18,7 @@ namespace BusinesssLayer.Concrete
             _ımessageDal = ımessageDal;
         }
 
+
         public object GetListBox()
         {
             throw new NotImplementedException();
@@ -25,7 +26,7 @@ namespace BusinesssLayer.Concrete
 
         public Message GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _ımessageDal.Get(x => x.MessageID == id);
         }
 
         public List<Message> GetListInbox()
