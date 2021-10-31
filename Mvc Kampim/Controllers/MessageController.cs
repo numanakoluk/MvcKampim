@@ -16,6 +16,8 @@ namespace Mvc_Kampim.Controllers
         // GET: Message
         MessageManager mm = new MessageManager(new EfMessageDal());
         MessageValidator messagevalidator = new MessageValidator();
+
+        [Authorize]
         public ActionResult Inbox()
             
         {

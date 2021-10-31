@@ -14,6 +14,8 @@ namespace Mvc_Kampim.Controllers
         
         // GET: About
         AboutManager abm = new AboutManager(new EfAboutDal());
+       
+
         public ActionResult Index()
         {
             var aboutvalues = abm.GetList();
