@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace Mvc_Kampim.Controllers
 {
     public class WriterPanelContentController : Controller
@@ -27,8 +28,9 @@ namespace Mvc_Kampim.Controllers
 
         }
         [HttpGet]
-        public ActionResult AddContent()
+        public ActionResult AddContent(int id)
         {
+            ViewBag.d = id;
             return View();
         }
         [HttpPost]
@@ -41,6 +43,10 @@ namespace Mvc_Kampim.Controllers
             p.ContentStatus = true;
             cm.ContentAdd(p);
             return RedirectToAction("MyContent");
+        }
+        public ActionResult ToDoList()
+        {
+            return View();
         }
     }
 }
